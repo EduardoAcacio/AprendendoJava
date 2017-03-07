@@ -29,6 +29,15 @@ a = 0
 while a <= 10:
     for twit in twittes:
         a += 1
+
+        b = twit['user']['screen_name']
+        c = twit['user']['name']
+        d = twit['user']['description']
+        e = twit['user']['url']
+        f = twit['user']['created_at']
+        g = twit["text"]
+        h = twit['created_at']
+
         print(a)
         print(twit['user']['screen_name'])
         print(twit['user']['name'])
@@ -38,9 +47,18 @@ while a <= 10:
         print(twit["text"])
         print(twit['created_at'])
         print()
+        lista = {a, b, c, d, e, f, g, h}
+        arquivo.write(str(lista))
+
+'''b = twit['user']['screen_name']
+c = twit['user']['name']
+d = twit['user']['description']
+e = twit['user']['url']
+f = twit['user']['created_at']
+g = twit["text"]
+h = twit['created_at']
+
+lista = {a, b, c, d, e, f, g, h}
+arquivo.write(str(lista))'''
 
 
-
-b = twit['user']['screen_name']
-
-pprint.pprint(b)
