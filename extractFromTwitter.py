@@ -1,3 +1,10 @@
+'''
+
+Codigo extrai dados do Twitter
+@author: Eduardo Acacio
+
+'''
+
 import oauth2
 import json
 import urllib.parse
@@ -33,6 +40,11 @@ arquivo.write(str("Twitter data extration with Python 3.4 \n\nWritten by: Eduard
 arquivo.write(str("Search: "))
 arquivo.write(str(query))
 arquivo.write(str(' \n\n'))
+
+### abaixo temos a variavel 'a' que foi declarada no inicio do codigo
+### o while vai de 'a' que é inicializado com 0 até 2985
+### porque 2985?
+### cada vez que o 'for' é executado ele extrai 15 twittes, fazendo até o numero 2985 extraimos 3000 twittes
 
 while a <= 2985:
     for twit in twittes:
